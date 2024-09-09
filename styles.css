@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('image/01.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 60px; /* Tambahkan padding-top sesuai dengan tinggi navbar */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 5, 0.5); /* Adjust the opacity to make it darker or lighter */
+    z-index: -1; /* Make sure the overlay is behind the content */
+}
+
+nav {
+    background-color: rgba(192, 197, 192, 0.8); /* Set background color with opacity */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed; /* Make navbar fixed */
+    width: 98%;
+    top: 0;
+    left: 0;
+    transition: top 0.3s; /* Smooth transition for showing/hiding navbar */
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Animasi gambar saat diklik */
+.shoe-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shoe-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide navbar when scrolling down */
+.nav-hidden {
+    top: -60px; /* Adjust if needed based on your navbar height */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header, section {
+    padding: 20px;
+    text-align: center;
+}
+
+.shoe-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shoe-item {
+    margin: 10px;
+    flex: 1 1 200px;
+    max-width: 250px;
+}
+
+.shoe-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(192, 197, 192, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #50B498;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    margin-top: 50px;
+}
+
+.social-icons a {
+    display: inline-block;
+    font-size: 10em; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+    color: white; /* Warna ikon */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: #50B498; /* Warna ikon saat dihover */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-links li {
+        margin: 5px 0;
+    }
+}
