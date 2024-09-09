@@ -166,13 +166,85 @@ footer {
     color: #50B498; /* Warna ikon saat dihover */
 }
 
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
+    /* Adjust navbar layout for mobile */
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
     .nav-links {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     
     .nav-links li {
         margin: 5px 0;
+    }
+
+    /* Adjust logo size */
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    /* Adjust gallery layout for mobile */
+    .shoe-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shoe-item {
+        max-width: 90%;
+    }
+
+    /* Adjust social icons for mobile */
+    .social-icons {
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .social-icons a {
+        font-size: 3em; /* Make icons smaller on mobile */
+    }
+}
+
+/* Media Queries for smaller screens (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 50px; /* Adjust navbar height for smaller screens */
+    }
+
+    /* Navbar adjustments for very small screens */
+    .nav-links {
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Make text smaller for smaller screens */
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .logo img {
+        height: 25px;
+    }
+
+    /* Adjust shoe gallery for small screens */
+    .shoe-item {
+        max-width: 100%;
+    }
+
+    /* Further reduce social icon size */
+    .social-icons a {
+        font-size: 2.5em;
     }
 }
