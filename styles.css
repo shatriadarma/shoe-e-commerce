@@ -168,28 +168,34 @@ footer {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
-    /* Adjust navbar layout for mobile */
+    /* Adjust navbar layout and size for mobile */
     nav {
         flex-direction: column;
-        padding: 10px;
+        padding: 5px 10px; /* Reduce padding on mobile */
+        background-color: rgba(192, 197, 192, 0.9); /* Make navbar slightly transparent */
     }
 
     .nav-links {
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
     
     .nav-links li {
-        margin: 5px 0;
+        margin: 3px 0; /* Reduce space between nav items */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller text size for mobile */
     }
 
     /* Adjust logo size */
     .logo {
-        font-size: 18px;
+        font-size: 18px; /* Smaller logo font size */
     }
 
     .logo img {
-        height: 30px;
+        height: 30px; /* Smaller logo image */
     }
 
     /* Adjust gallery layout for mobile */
@@ -216,18 +222,12 @@ footer {
 
 /* Media Queries for smaller screens (max-width: 480px) */
 @media (max-width: 480px) {
-    body {
-        padding-top: 50px; /* Adjust navbar height for smaller screens */
-    }
-
-    /* Navbar adjustments for very small screens */
-    .nav-links {
-        align-items: center;
-        padding: 0;
+    nav {
+        padding: 5px; /* Even smaller padding on very small screens */
     }
 
     .nav-links a {
-        font-size: 14px; /* Make text smaller for smaller screens */
+        font-size: 12px; /* Further reduce text size */
     }
 
     .logo {
@@ -235,9 +235,8 @@ footer {
     }
 
     .logo img {
-        height: 25px;
+        height: 25px; /* Further reduce logo size */
     }
-
     /* Adjust shoe gallery for small screens */
     .shoe-item {
         max-width: 100%;
@@ -248,3 +247,4 @@ footer {
         font-size: 2.5em;
     }
 }
+
