@@ -110,6 +110,7 @@ header, section {
     border-radius: 10px;
 }
 
+
 footer {
     color: white;
     text-align: center;
@@ -165,6 +166,62 @@ footer {
     transform: scale(1.1);
     color: #50B498; /* Warna ikon saat dihover */
 }
+
+/* Styling for hamburger button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    /* Show the hamburger button on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Initially hide nav links on mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(192, 197, 192, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Change the look of the hamburger icon when menu is open */
+    .hamburger.toggle span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
