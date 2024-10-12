@@ -167,6 +167,13 @@ footer {
     color: #50B498; /* Warna ikon saat dihover */
 }
 
+/* Instagram Logo */
+.gradient-icon {
+    background: linear-gradient(45deg, #833AB4, #E1306C, #FD1D1D, #FCAF45);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* Styling for hamburger button */
 .hamburger {
     display: none;
